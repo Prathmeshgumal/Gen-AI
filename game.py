@@ -1,30 +1,7 @@
-from shutil import move
-import pandas as pandas
-import numpy as np
-
-board = np.array([[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]])
+import numpy as np 
+import pandas as pd
+a01,a02,a03,a04,a11,a12,a13,a14,a21,a22,a23,a24,a31,a32,a33,a34,a41,a42,a43,a44=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+board = np.array([[a01,a02,a03,a04],[a11,a12,a13,a14],[a21,a22,a23,a24],[a31,a32,a33,a34],[a41,a42,a43,a44]])
 print(board)
-for i in range(10):
-    move_x = int(input("enter row"))
-    move_y = int(input("enter column"))
-
-    board[move_x][move_y] = 3
-
-    print(board)
-
-    move_x1 = int(input("enter row"))
-    move_y1 = int(input("enter column"))
-
-    if move_x1 == move_x and move_y1 == move_y:
-        board[move_x][move_y] = 0
-        board[move_x-1][move_y] = 1
-        board[move_x][move_y-1] = 1
-        board[move_x+1][move_y] = 1
-        board[move_x][move_y+1] = 1
-        print(board)
-    else:
-        board[move_x1][move_y1] = 3
-        print(board)
-
 
 
